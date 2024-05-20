@@ -21,40 +21,52 @@
             <div id="wrap">
                <div id="text">
                     <div id="code">                 
-                    <span class="say">我的爱人，我会牵着你的手，走到满头白发的那一天，</span><br>
-                    <span class="say">我会守护你生命里的精彩，并陪伴你一路精彩下去。</span><br>
-                    <span class="say">你的幸福快乐，是我一生的追求。</span><br>
-                    <span class="say">我会每一天带着笑脸，和你说早安，</span><br>
-                     <span class="say">我会每一晚与你道声晚安再入梦乡，</span><br>
-                    <span class="say">我会带你去所有你想去的地方，</span><br>
-                    <span class="say">陪你闹看你笑</span><br>
-                    <span class="say">历经你生命中所有的点点滴滴。</span><br>
-                    <span class="say">我期待这一生与你一起走过，</span><br>
-                    <span class="say">我期待与你慢慢变老</span><br>
-                    <span class="say">等我们老到哪儿也去不了，</span><br>
-                    <span class="say">还能满载着一生的幸福快乐 ！</span><br>
+                    <span class="say">落日沉溺于橘色的海，晚风沦陷于赤诚的爱</span><br>
+                    <span class="say">而我沉醉在你Kiss时迷离的眼神中，无法自拔</span><br>
                     <br>
-                    <span class="say">我会为我们的未来撑起一片天空，</span><br>
-                     <span class="say">为我们的将来担负起一生的责任，</span><br>
-                      <span class="say">愿意为你去做每一件能让你开心快乐的事。</span><br>
-                       <span class="say">所有我们经历的点点滴滴，</span><br>
-                        <span class="say">都是我们一辈子最美的回忆。</span><br>
-                         <span class="say">我愿意爱你直到老去！</span><br>
+                    <span class="say">喜欢你轻唤“老公”时的温柔</span><br>
+                     <span class="say">喜欢你非常努力给我安全感</span><br>
+                      <span class="say">喜欢你生气时仍愿主动沟通</span><br>
+                       <span class="say">喜欢你处理生活点滴的细心</span><br>
+                       <br>
+                        <span class="say">我真的从未如此想和一个人走到最后</span><br>
+                         <span class="say">直到遇见了你</span><br>
+                         <span class="say">跟你恋爱我可以放下我理智的一面</span><br>
+                         <span class="say">但仔细想想这也不准确</span><br>
+                         <span class="say">即使我时刻保持理智，我还是最喜欢你了宝贝 ( •͈ᴗ⁃͈)ᓂ- - </span><br>
                    <br>
-                    <span class="say"><span class="space"></span> -- Yours, 你的名字.</span>
+                    <span class="say"><span class="space"></span> -- Yours -♡.</span>
                     </div>
                 </div>
                 <div id="clock-box">
-                    <a href="你的个人链接" target="_blank">@你的名字</a> 与 <a href="你的个人链接" target="_blank">@你的那个她</a> 在一起的
+                    <a href="你的个人链接" target="_blank">小谭</a> 与 <a href="你的个人链接" target="_blank">小江</a> 在一起的
                         <div id="clock"></div>
                 </div>
                 <canvas id="canvas" width="1100" height="680"></canvas>
             </div>
-            <audio src="love.mp3" autoplay="autoplay"></audio>
+            <audio id="myAudio" src="loveSong.mp3" autoplay="autoplay" muted></audio>
+            <button id="playButton" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: transparent; border: none; z-index: 9999;"></button>
         </div>
     
-    <script>
-    </script>
+        <script>
+            document.getElementById('playButton').addEventListener('click', function(event) {
+                var audio = document.getElementById('myAudio');
+                audio.muted = false;
+                audio.play();
+        
+                // Remove the button after the first click
+                event.target.style.display = 'none';
+        
+                // Create a new event and dispatch it to the element below the button
+                var newEvent = new MouseEvent('click', {
+                    'view': window,
+                    'bubbles': true,
+                    'cancelable': true
+                });
+                var elementBelow = document.elementFromPoint(event.clientX, event.clientY);
+                elementBelow.dispatchEvent(newEvent);
+            });
+        </script>
 
     <script>
     (function(){
@@ -187,9 +199,9 @@
 
         var textAnimate = eval(Jscex.compile("async", function () {
             var together = new Date();
-            together.setFullYear(2021, 4, 10);
-            together.setHours(20);
-            together.setMinutes(20);
+            together.setFullYear(2024, 2, 28);
+            together.setHours(23);
+            together.setMinutes(30);
             together.setSeconds(0);
             together.setMilliseconds(0);
 
